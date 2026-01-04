@@ -1,0 +1,159 @@
+:root {
+    --astro-bg: #050505;
+    --astro-gold: #fbbf24;
+    --astro-accent: #d97706;
+    --astro-surface: rgba(30, 41, 59, 0.8);
+    --astro-font: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    background-color: var(--astro-bg);
+    background-image: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.2) 0%, transparent 70%);
+    background-attachment: fixed;
+    color: #e2e8f0;
+    font-family: var(--astro-font);
+}
+
+.text-astro-gold {
+    color: var(--astro-gold) !important;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.tracking-widest {
+    letter-spacing: 0.1em;
+}
+
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #343a40;
+}
+
+.logo-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(to top right, var(--astro-gold), var(--astro-accent));
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+}
+
+.nav-link {
+    color: #9ca3af !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--astro-gold) !important;
+}
+
+.glass-card {
+    background-color: var(--astro-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid #374151;
+}
+
+.indicator-pill {
+    width: 8px;
+    height: 24px;
+    background-color: var(--astro-gold);
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.custom-select {
+    background-color: #1f2937;
+    border: 1px solid #4b5563;
+    color: white;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+.custom-select:focus {
+    background-color: #1f2937;
+    border-color: var(--astro-gold);
+    box-shadow: 0 0 0 0.25rem rgba(251, 191, 36, 0.25);
+    color: white;
+}
+
+.btn-astro-gradient {
+    background: linear-gradient(to right, var(--astro-gold), var(--astro-accent));
+    color: black;
+    border: none;
+    transition: filter 0.3s;
+}
+
+.btn-astro-gradient:hover {
+    filter: brightness(110%);
+    color: black;
+}
+
+.btn-outline-gold {
+    border: 1px solid rgba(251, 191, 36, 0.5);
+    color: var(--astro-gold);
+    transition: all 0.3s;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--astro-gold);
+    color: black;
+}
+
+.glow-bg {
+    background-color: rgba(251, 191, 36, 0.05);
+    filter: blur(40px);
+}
+
+.mask-cutout {
+    -webkit-mask-image: conic-gradient(from 30deg, black 0deg 300deg, transparent 300deg 360deg);
+    mask-image: conic-gradient(from 30deg, black 0deg 300deg, transparent 300deg 360deg);
+}
+
+.shadow-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 30deg, transparent 0deg 299.5deg, rgba(0,0,0,0.8) 299.5deg 300.5deg, transparent 300.5deg);
+    pointer-events: none;
+}
+
+.lighting-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, rgba(255,255,255,0.1), transparent, rgba(0,0,0,0.3));
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.divider {
+    height: 1px;
+    width: 6rem;
+    background-color: #374151;
+}
+
+.gold-line {
+    width: 6rem;
+    height: 4px;
+    background: linear-gradient(to right, transparent, var(--astro-gold), transparent);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(4px);
+}
